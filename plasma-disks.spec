@@ -20,6 +20,7 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5Solid)
 BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	smartmontools
 Requires:	smartmontools
 
