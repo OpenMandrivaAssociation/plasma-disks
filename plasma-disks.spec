@@ -42,8 +42,8 @@ signs of imminent failure appear.
 
 %files -f %{name}.lang
 %license LICENSES/*.txt
-%{_libexecdir}/kf5/kauth/kded-smart-helper
-%{_libdir}/qt5/plugins/plasma/kcms/smart.so
+%{_libexecdir}/kauth/kded-smart-helper
+%{_libdir}/qt5/plugins/kcms/smart.so
 %{_libdir}/qt5/plugins/kf5/kded/smart.so
 %{_datadir}/dbus-1/system-services/org.kde.kded.smart.service
 %{_datadir}/dbus-1/system.d/org.kde.kded.smart.conf
