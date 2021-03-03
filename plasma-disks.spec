@@ -42,13 +42,13 @@ signs of imminent failure appear.
 
 %files -f %{name}.lang
 %license LICENSES/*.txt
-%{_libexecdir}/kauth/kded-smart-helper
-%{_libdir}/qt5/plugins/kcms/smart.so
-%{_libdir}/qt5/plugins/kf5/kded/smart.so
+%{_kde5_libexecdir}/kauth/kded-smart-helper
+%{_qt5_plugindir}/kcms/smart.so
+%{_kde5_plugindir}/kded/smart.so
 %{_datadir}/dbus-1/system-services/org.kde.kded.smart.service
 %{_datadir}/dbus-1/system.d/org.kde.kded.smart.conf
-%{_datadir}/knotifications5/org.kde.kded.smart.notifyrc
-%{_datadir}/kpackage/kcms/plasma_disks/*
-%{_datadir}/kservices5/smart.desktop
+%{_kde5_notificationsdir}/org.kde.kded.smart.notifyrc
+%{_kde5_package}/kcms/plasma_disks/*
+%{_kde5_services}/smart.desktop
 %{_datadir}/metainfo/org.kde.plasma.disks.metainfo.xml
 %{_datadir}/polkit-1/actions/org.kde.kded.smart.policy
