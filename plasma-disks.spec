@@ -3,8 +3,8 @@
 
 Summary:	Hard disk health monitoring for KDE Plasma
 Name:		plasma-disks
-Version:	5.23.5
-Release:	2
+Version:	5.24.0
+Release:	1
 License:	GPL
 Group:		Graphical desktop/KDE
 URL:		https://kde.org
@@ -43,12 +43,11 @@ signs of imminent failure appear.
 %files -f %{name}.lang
 %license LICENSES/*.txt
 %{_kde5_libexecdir}/kauth/kded-smart-helper
-%{_qt5_plugindir}/kcms/smart.so
 %{_kde5_plugindir}/kded/smart.so
 %{_datadir}/dbus-1/system-services/org.kde.kded.smart.service
 %{_datadir}/dbus-1/system.d/org.kde.kded.smart.conf
 %{_kde5_notificationsdir}/org.kde.kded.smart.notifyrc
 %{_kde5_package}/kcms/plasma_disks/*
-%{_kde5_services}/smart.desktop
+%{_libdir}/qt5/plugins/plasma/kcms/kinfocenter/smart.so
 %{_datadir}/metainfo/org.kde.plasma.disks.metainfo.xml
 %{_datadir}/polkit-1/actions/org.kde.kded.smart.policy
