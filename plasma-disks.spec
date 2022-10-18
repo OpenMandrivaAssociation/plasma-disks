@@ -3,7 +3,7 @@
 
 Summary:	Hard disk health monitoring for KDE Plasma
 Name:		plasma-disks
-Version:	5.26.0
+Version:	5.26.1
 Release:	1
 License:	GPL
 Group:		Graphical desktop/KDE
