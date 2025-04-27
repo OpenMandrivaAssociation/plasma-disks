@@ -5,9 +5,9 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Hard disk health monitoring for KDE Plasma
-Name:		plasma6-disks
+Name:		plasma-disks
 Version:	6.3.4
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 License:	GPL
 Group:		Graphical desktop/KDE
 URL:		https://kde.org
@@ -34,27 +34,16 @@ BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	smartmontools
 BuildRequires:	gettext
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 Requires:	smartmontools
+# Renamed after 6.0 2025-04-27
+%rename plasma6-disks
 
 %description
 Plasma Disks monitors S.M.A.R.T. data of disks and alerts the user when
 signs of imminent failure appear.
-
-%prep
-%autosetup -n plasma-disks-%{?git:%{gitbranchd}}%{!?git:%{version}} -p1
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang %{name} --all-name
 
 %files -f %{name}.lang
 %license LICENSES/*.txt
